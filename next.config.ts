@@ -1,7 +1,27 @@
-import type { NextConfig } from "next";
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "static.tvmaze.com",
+        pathname: "/uploads/images/**",
+      },
+    ],
+  },
+}
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
+module.exports = nextConfig
 
-export default nextConfig;
+
+// // next.config.js
+// module.exports = {
+//   async rewrites() {
+//     return [
+//       {
+//         source: "/api/films",
+//         destination: "https://ghibliapi.vercel.app/films",
+//       },
+//     ];
+//   },
+// };
