@@ -2,6 +2,11 @@
 import useMovies from "@/app/store/movieStore";
 import Image from "next/image";
 
+export const metadata = {
+  title: "Favorite Movies",
+  description: "Your favorite movies list",
+};
+
 const FavMovies = () => {
   const favMovies = useMovies((state) => state.movies);
   const deleteMovie = useMovies((state) => state.deleteMovie);

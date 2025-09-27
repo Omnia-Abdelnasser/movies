@@ -14,6 +14,10 @@ import { toast } from "sonner";
 import Link from "next/link";
 import Image from "next/image";
 
+export const metadata = {
+  title: "Movies page",
+  description: "Browse and discover movies",
+};
 const Movies = () => {
   const [search, setSearch] = useState("");
   const [currentPage, setCurrentPage] = useState(1);

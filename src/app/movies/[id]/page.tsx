@@ -3,6 +3,10 @@ import { useParams, useRouter } from "next/navigation";
 import { UseGetMovies } from "@/app/movies/hook";
 import Image from "next/image";
 
+export const metadata = {
+  title: "Movie Details",
+  description: "Detailed view of the selected movie",
+};
 const MovieDetails = () => {
   const params = useParams();
   const router = useRouter();
